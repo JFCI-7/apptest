@@ -1,0 +1,13 @@
+# ─── CODEOWNERS — quién aprueba cada zona ─────────────────────
+# Sintaxis: ruta  @usuario-o-equipo
+# IMPORTANTE: gana la ÚLTIMA regla que haga match (por eso el * va primero)
+
+# Fallback global (todo lo que no esté abajo)
+*           @JFCI-7
+
+# Zonas específicas (simula equipos: backend / frontend / plataforma)
+backend/    @JFCI-7   # equipo backend
+frontend/   @JFCI-7   # equipo frontend
+contracts/  @JFCI-7   # equipo plataforma (contratos)
+docs/       @JFCI-7
+.github/    @JFCI-7   # DevOps
