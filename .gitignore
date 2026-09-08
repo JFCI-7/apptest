@@ -5,6 +5,12 @@ node_modules/
 dist/
 build/
 
+# Tests (Jest/Vitest generan esta carpeta)
+coverage/
+
+# Cache de Vite (frontend)
+.vite/
+
 # Entorno y secretos
 .env
 .env.*
