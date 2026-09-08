@@ -1,0 +1,21 @@
+openapi: 3.0.3
+info:
+  title: app-test API
+  version: 0.1.0
+  description: API del catálogo de clientes (walking skeleton)
+paths:
+  /health:
+    get:
+      summary: Health check
+      operationId: getHealth
+      responses:
+        "200":
+          description: Servicio arriba
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "ok"
