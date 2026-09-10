@@ -1,5 +1,5 @@
-<!-- backend/README.md -->
+<!-- frontend/README.md -->
 
-# Backend — app-test
+# Frontend — app-test
 
-Node + Express + TypeScript. Base de datos en memoria.
+Vue 3 + TypeScript + Tailwind CSS. SOLO UI.
