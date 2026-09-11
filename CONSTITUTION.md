@@ -58,7 +58,7 @@
 ## 9. Trazabilidad y gestión
 
 - HUs y sprints viven en Plane (App Test) y se gestionan vía REST API.
-- Cada rama: `feature/HU-{id}-{slug}`.
+- Cada rama: `feature/{sequence_id}-{slug}`.
 - Commits y PRs referencian el id de la HU.
 - Al terminar una HU: marcarla completada en Plane + enlazar el PR.
 
