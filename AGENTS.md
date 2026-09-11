@@ -31,6 +31,11 @@ usado como ensayo de un proyecto grande (SDD + TDD + DevOps + CI/CD).
 | `.github/`             | CODEOWNERS, PR template, CI por zona                                                                 |
 | `.opencode/skills/`    | Skills del proyecto (spec-author, contract-first, tdd-cycle, plane-sync, hu-workflow, skill-creator) |
 
+## Reglas por zona (leer según dónde trabajes)
+
+- Trabajando en `backend/` → lee `backend/AGENTS.md` (Clean Architecture, Express, supertest).
+- Trabajando en `frontend/` → lee `frontend/AGENTS.md` (composables, feature-based, Vue).
+
 ## Reglas duras de separación front/back
 
 - Trabajando una HU de backend, NUNCA edites `frontend/` (y viceversa).
