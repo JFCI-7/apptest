@@ -46,6 +46,14 @@ usado como ensayo de un proyecto grande (SDD + TDD + DevOps + CI/CD).
 - Commits: Conventional Commits con scope → `feat(backend): ...`, `fix(frontend): ...`
 - Todo entra por PR; `main` protegida (CI verde + aprobación CODEOWNERS).
 
+## Modo de trabajo asistido (ANTI-vibe-coding)
+
+- NO implementes nada de golpe: primero PROPÓN un plan paso a paso.
+- Espera la aprobación del usuario ANTES de ejecutar cada paso.
+- En cada paso, muestra el código/diff y espera el OK antes de continuar.
+- Si el usuario corrige algo, ajústate y vuelve a proponer.
+- Solo haces commit cuando el usuario lo aprueba explícitamente.
+
 ## Plane (HUs y sprints)
 
 - Leer/crear/actualizar HUs vía REST API: consulta `docs/references/plane-api.md`.
