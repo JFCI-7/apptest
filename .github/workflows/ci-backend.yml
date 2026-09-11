@@ -5,11 +5,15 @@ on:
     paths:
       - "backend/**"
       - "contracts/**"
+      - "package.json"
+      - "package-lock.json"
   push:
     branches: [main]
     paths:
       - "backend/**"
       - "contracts/**"
+      - "package.json"
+      - "package-lock.json"
 
 jobs:
   backend-test:
@@ -21,16 +25,13 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: backend/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Instalar dependencias
-        working-directory: backend
         run: npm ci
 
       - name: Typecheck
-        working-directory: backend
-        run: npm run typecheck
+        run: npm run typecheck --workspace=backend
 
       - name: Tests (puerta TDD)
-        working-directory: backend
-        run: npm test
+        run: npm test --workspace=backend
