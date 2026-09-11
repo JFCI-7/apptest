@@ -84,6 +84,20 @@ curl -X PATCH "$PLANE_BASE_URL/workspaces/$WS/projects/$PID/work-items/HU_ID/" \
   -d '{"state_id": "ESTADO_DONE_ID"}'
 ```
 
+## Etiquetas (labels) para métricas
+
+Cada HU lleva **≥1 label de zona + 1 de tipo** (la feature es opcional pero recomendada). Vocabulario cerrado: no inventar labels nuevos sin actualizar esta sección.
+
+| Grupo | Labels |
+| ----- | ------ |
+| Zona | `backend`, `frontend`, `compartida` (+ `contrato`, `infra` si aplica) |
+| Tipo | `feature`, `bugfix`, `refactor`, `test`, `docs`, `infra` |
+| Feature | `feature/{NNN}-{slug}` (ej. `feature/000-base`) |
+
+- Crear: `POST /workspaces/{ws}/projects/{pid}/labels/` con `{"name": "..."}`.
+- Asignar: `PATCH /workspaces/{ws}/projects/{pid}/work-items/{wid}/` con `{"labels": ["<label_id>", ...]}`.
+- Consultar: `GET .../work-items/?expand=labels`.
+
 ## Notas
 
 - Los grupos de estado típicos: `backlog`, `unstarted`, `started`, `completed`, `cancelled` (cada proyecto tiene sus propios `state_id`).

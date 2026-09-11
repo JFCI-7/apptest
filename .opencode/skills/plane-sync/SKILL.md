@@ -7,7 +7,7 @@ description: Gestiona HUs, sprints (cycles) y estados en Plane vía REST API (se
 
 Las HUs y sprints viven en Plane (proyecto "App Test") y se gestionan vía
 REST API (CONSTITUTION.md §9). La referencia completa de endpoints, IDs y
-ejemplos curl está en `docs/plane-api.md` — léela antes de actuar; este skill
+ejemplos curl está en `docs/references/plane-api.md` — léela antes de actuar; este skill
 ordena el flujo y fija las reglas de seguridad.
 
 ## Precondiciones (verificar SIEMPRE antes de cualquier petición)
