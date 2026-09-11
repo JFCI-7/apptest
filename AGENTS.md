@@ -54,6 +54,18 @@ usado como ensayo de un proyecto grande (SDD + TDD + DevOps + CI/CD).
 - Si el usuario corrige algo, ajústate y vuelve a proponer.
 - Solo haces commit cuando el usuario lo aprueba explícitamente.
 
+## Modo TDD (para HUs de código)
+
+- PRIMERO escribe el test que falle (🔴) y muéstramelo antes de implementar.
+- El test es la especificación ejecutable: define el comportamiento esperado.
+- Luego implementa el MÍNIMO para que pase (🟢), aunque sea feo o todo en el handler.
+- Después refactoriza (🔵) aplicando Clean Architecture (separar dominio/casos/uso/infra).
+- Backend: exporta `createApp()` desde `app.ts` y separa `server.ts` (que hace listen).
+- Tests de endpoints usan supertest contra `createApp()` (sin levantar puerto).
+- NUNCA escribas implementación sin un test que falle primero.
+- El 🔴 debe fallar por ASERCIÓN (no por error de compilación/runtime).
+- El refactor (🔵) es obligatorio en la MISMA HU, antes de marcarla `completed` en Plane.
+
 ## Plane (HUs y sprints)
 
 - Leer/crear/actualizar HUs vía REST API: consulta `docs/references/plane-api.md`.
