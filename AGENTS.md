@@ -19,17 +19,17 @@ usado como ensayo de un proyecto grande (SDD + TDD + DevOps + CI/CD).
 
 ## Mapa del repo
 
-| Ruta                | Contenido                                                                                            |
-| ------------------- | ---------------------------------------------------------------------------------------------------- |
-| `backend/`          | Node + Express + TypeScript (SOLO servidor, BD en memoria)                                           |
-| `frontend/`         | Vue 3 + TypeScript + Tailwind (SOLO UI)                                                              |
-| `contracts/`        | openapi.yaml — contrato compartido                                                                   |
+| Ruta                   | Contenido                                                                                            |
+| ---------------------- | ---------------------------------------------------------------------------------------------------- |
+| `backend/`             | Node + Express + TypeScript (SOLO servidor, BD en memoria)                                           |
+| `frontend/`            | Vue 3 + TypeScript + Tailwind (SOLO UI)                                                              |
+| `contracts/`           | openapi.yaml — contrato compartido                                                                   |
 | `docs/requirements.md` | requisitos de negocio de nivel 0                                                                     |
-| `docs/specs/`       | specs (fuente de verdad del QUÉ)                                                                     |
-| `docs/adr/`         | ADRs (decisiones de arquitectura)                                                                    |
-| `docs/references/`  | referencias operativas, incluida la guía de Plane                                                    |
-| `.github/`          | CODEOWNERS, PR template, CI por zona                                                                 |
-| `.opencode/skills/` | Skills del proyecto (spec-author, contract-first, tdd-cycle, plane-sync, hu-workflow, skill-creator) |
+| `docs/specs/`          | specs (fuente de verdad del QUÉ)                                                                     |
+| `docs/adr/`            | ADRs (decisiones de arquitectura)                                                                    |
+| `docs/references/`     | referencias operativas, incluida la guía de Plane                                                    |
+| `.github/`             | CODEOWNERS, PR template, CI por zona                                                                 |
+| `.opencode/skills/`    | Skills del proyecto (spec-author, contract-first, tdd-cycle, plane-sync, hu-workflow, skill-creator) |
 
 ## Reglas duras de separación front/back
 
@@ -42,7 +42,7 @@ usado como ensayo de un proyecto grande (SDD + TDD + DevOps + CI/CD).
 - TDD: 🔴 rojo → 🟢 verde → 🔵 refactor. Nunca código sin test previo.
 - Rebanadas verticales: de punta a punta (backend + DB + frontend).
 - 1 feature = 1 spec + 1 sprint (Cycle) + VARIAS HUs.
-- Ramas: `feature/HU-{id}-{slug}`.
+- Ramas: `feature/{sequence_id}-{slug}`.
 - Commits: Conventional Commits con scope → `feat(backend): ...`, `fix(frontend): ...`
 - Todo entra por PR; `main` protegida (CI verde + aprobación CODEOWNERS).
 
