@@ -1,0 +1,13 @@
+.git
+.github
+.opencode
+docs
+contracts
+AGENTS.md
+CONSTITUTION.md
+*.md
+**/node_modules
+**/dist
+**/coverage
+**/.vite
+.DS_Store
