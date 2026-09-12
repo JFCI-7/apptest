@@ -35,3 +35,6 @@ jobs:
 
       - name: Tests (puerta TDD)
         run: npm test --workspace=backend
+
+      - name: Build
+        run: npm run build --workspace=backend
