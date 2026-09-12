@@ -1,12 +1,14 @@
 name: CI Backend
 
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - "backend/**"
       - "contracts/**"
       - "package.json"
       - "package-lock.json"
+      - ".github/workflows/**"
   push:
     branches: [main]
     paths:
@@ -14,6 +16,7 @@ on:
       - "contracts/**"
       - "package.json"
       - "package-lock.json"
+      - ".github/workflows/**"
 
 jobs:
   backend-test:
