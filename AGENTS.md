@@ -82,3 +82,7 @@ usado como ensayo de un proyecto grande (SDD + TDD + DevOps + CI/CD).
 
 - Backend: `cd backend && npm test`
 - Frontend: `cd frontend && npm run dev`
+
+## Setup (una vez por clon)
+
+git config core.hooksPath .githooks
