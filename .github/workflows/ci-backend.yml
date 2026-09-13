@@ -9,6 +9,7 @@ on:
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/**"
+      - ".githooks/**"
   push:
     branches: [main]
     paths:
@@ -17,6 +18,7 @@ on:
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/**"
+      - ".githooks/**"
 
 jobs:
   backend-test:
